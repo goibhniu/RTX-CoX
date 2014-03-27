@@ -447,22 +447,14 @@ GPIODirModeSet(unsigned long ulPort, unsigned long ulBit,
     //
     // Set the pin direction and mode.
     //
-    if(ulBit < 8)
-    {
-        xHWREG(ulPort + GPIO_CRL) &=                
-        (~((GPIO_CRL_MODE0_M | GPIO_CRL_CNF0_M) << (ulBit * 4)));
+
+        xHWREG(ulPort + GPIO_OTYPER) |=
+        (ulPinType << (ulBit * 2));
     
-        xHWREG(ulPort + GPIO_CRL) = (xHWREG(ulPort + GPIO_CRL) |               \
-        (((ulPinSpeed | ulPinType)) << (ulBit * 4)));  
-    }
-    else
-    {
-        xHWREG(ulPort + GPIO_CRH) &=                
-        (~((GPIO_CRH_MODE8_M | GPIO_CRH_CNF8_M) << ((ulBit -8) * 4)));
-    
-        xHWREG(ulPort + GPIO_CRH) = (xHWREG(ulPort + GPIO_CRH) |               \
-        (((ulPinSpeed | ulPinType)) << ((ulBit -8) * 4)));
-    }
+        xHWREG(ulPort + GPIO_OSPEEDR) |=
+        (ulPinSpeed << (ulBit * 2));
+
+
 }
 
 //*****************************************************************************
@@ -554,16 +546,9 @@ GPIODirModeGet(unsigned long ulPort, unsigned long ulBit)
     //
     // Return the pin direction and mode.
     //
-    if(ulBit < 8)
-    {
-        return((xHWREG(ulPort + GPIO_CRL) & 
-               (0xF << (ulBit * 4))) >> (ulBit * 4));
-    }
-    else
-    {
-        return((xHWREG(ulPort + GPIO_CRH) & 
-               (0xF << ((ulBit - 8) * 4))) >> ((ulBit - 8) * 4));
-    }
+        return((xHWREG(ulPort + GPIO_OTYPER) &
+               (0x3 << (ulBit * 2))) >> (ulBit * 2));
+
 }
 
 //*****************************************************************************

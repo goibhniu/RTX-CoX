@@ -81,14 +81,23 @@
 //*****************************************************************************
 
 //
-//! Port configuration register low
+//! Port Mode Register
 //
-#define GPIO_CRL                0x00000020
+#define GPIO_MODER                0x00000000
 
 //
-//! Port configuration register high
+//! Port Output Type Register
 //
-#define GPIO_CRH                0x00000024
+#define GPIO_OTYPER               0x00000004
+
+//
+//! Port Output Speed Register
+//
+#define GPIO_OSPEEDR              0x00000008
+//
+//! Port Pull Up Pull Down Register
+//
+#define GPIO_PUPDR				  0x0000000C
 
 //
 //! Port input data register

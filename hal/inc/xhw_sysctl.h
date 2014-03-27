@@ -85,45 +85,78 @@
 //
 #define FLASH_ACR               0x40022000
 
+#define SysCtl_BASE             0x40023800
+
 //
 //! Clock control register
 //
-#define RCC_CR                  0x40021000
+#define RCC_CR                  SysCtl_BASE + 0x00
 
 //
-//! Clock configuration register
+//! PLL configuration register
 //
-#define RCC_CFGR                0x40021004
+#define RCC_PLLCFGR             SysCtl_BASE + 0x04
 
+//
+//! Clock Configuration Register
+//
+#define RCC_CFGR				SysCtl_BASE + 0x08
 //
 //! Clock interrupt register
 //
-#define RCC_CIR                 0x40021008
+#define RCC_CIR                 SysCtl_BASE + 0x0C
 
 //
-//! APB2 peripheral reset register
+//! AHB1 peripheral reset register
 //
-#define RCC_APB2RSTR            0x4002100C
+#define RCC_AHB1RSTR            SysCtl_BASE + 0x10
+
+//
+//! AHB2 peripheral reset register
+//
+#define RCC_AHB2RSTR            SysCtl_BASE + 0x14
+
+//
+//! AHB3 peripheral reset register
+//
+#define RCC_AHB3RSTR            SysCtl_BASE + 0x18
 
 //
 //! APB1 peripheral reset register
 //
-#define RCC_APB1RSTR            0x40021010
+#define RCC_APB1RSTR            SysCtl_BASE + 0x20
+
+//
+//! APB2 peripheral reset register
+//
+#define RCC_APB2RSTR            SysCtl_BASE + 0x24
 
 //
 //! AHB Peripheral Clock enable register
 //
-#define RCC_AHBENR              0x40021014
+#define RCC_AHB1ENR             SysCtl_BASE + 0x30
 
 //
-//! APB2 peripheral clock enable register
+//! AHB Peripheral Clock enable register
 //
-#define RCC_APB2ENR             0x40021018
+#define RCC_AHB2ENR             SysCtl_BASE + 0x34
+
+//
+//! AHB3 Peripheral Clock Enable Register
+//
+#define RCC_AHB3ENR				SysCtl_BASE + 0x38
 
 //
 //! APB1 peripheral clock enable register
 //
-#define RCC_APB1ENR             0x4002101C
+#define RCC_APB1ENR             SysCtl_BASE + 0x40
+
+//
+//! APB2 peripheral clock enable register
+//
+#define RCC_APB2ENR             SysCtl_BASE + 0x44
+
+
 
 //
 //! Backup domain control register
@@ -1704,7 +1737,7 @@
 //
 #define FLASH_ACR_LATENCY_2          0x00000002
 
-
+//SYSCTL_PERIPH_INDEX
 //*****************************************************************************
 //
 //! @}

@@ -491,7 +491,7 @@ extern "C"
 #define GPF11                   GPIOF_BASE, GPIO_PIN_11
 #define GPF12                   GPIOF_BASE, GPIO_PIN_12
 #define GPF13                   GPIOF_BASE, GPIO_PIN_13
-#define GPF14                   GPIOF_BASE, GPIO_PIN_14
+#define GPF14                   GPIOF_BSyntaxASE, GPIO_PIN_14
 #define GPF15                   GPIOF_BASE, GPIO_PIN_15
 
 #define GPG0                    GPIOG_BASE, GPIO_PIN_0
@@ -2570,17 +2570,22 @@ extern unsigned long xGPIODirModeGet(unsigned long ulPort,
 //
 //! Output mode, max speed 10 MHz.
 //
-#define GPIO_OUT_SPEED_10M      0x00000001  
+#define GPIO_OUT_SPEED_25M      0x00000001
 
 //
 //! Output mode, max speed 2 MHz.
 //
-#define GPIO_OUT_SPEED_2M       0x00000002 
+#define GPIO_OUT_SPEED_2M       0x00000000
 
 //
 //! Output mode, max speed 50 MHz.
 //
-#define GPIO_OUT_SPEED_50M      0x00000003  
+#define GPIO_OUT_SPEED_50M      0x00000002
+
+//
+//! Output mode, max speed 100 MHz.
+//
+#define GPIO_OUT_SPEED_100M      0x00000003
 
 //*****************************************************************************
 //

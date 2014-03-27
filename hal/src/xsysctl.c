@@ -87,9 +87,11 @@ static unsigned long s_ulExtClockMHz = xHSE_VAL;
 //*****************************************************************************
 static const unsigned long g_pulIPRSTRegs[] =
 {
-    RCC_AHBRSTR,
-    RCC_APB2RSTR,
-    RCC_APB1RSTR
+    RCC_AHB1RSTR,
+    RCC_AHB2RSTR,
+    RCC_AHB3RSTR,
+    RCC_APB1RSTR,
+    RCC_APB2RSTR
 };
 
 //*****************************************************************************
@@ -101,9 +103,11 @@ static const unsigned long g_pulIPRSTRegs[] =
 //*****************************************************************************
 static const unsigned long g_pulAXBCLKRegs[] =
 {
-    RCC_AHBENR,
-    RCC_APB2ENR,
+    RCC_AHB1ENR,
+    RCC_AHB2ENR,
+    RCC_AHB3ENR,
     RCC_APB1ENR,
+    RCC_APB2ENR,
     RCC_BDCR
 };
 
@@ -1158,7 +1162,7 @@ SysCtlLSEConfig(unsigned long ulLSEConfig)
 //!
 //! \param ulPeripheralSrc is the peripheral clock source to set.
 //!
-//! Peripherals clock source are seted with this function.  At power-up, all 
+//! Peripherals clock source are set with this function.  At power-up, all
 //! Peripherals clock source are Peripherals clock source; they must be set in 
 //! order to operate or respond to register reads/writes.
 //!
