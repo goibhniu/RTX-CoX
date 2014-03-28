@@ -2555,7 +2555,7 @@ extern unsigned long xGPIODirModeGet(unsigned long ulPort,
 
 //*****************************************************************************
 //
-//! \addtogroup STM32F1xx_GPIO_Out_Speed STM32F1xx GPIO output speed
+//! \addtogroup STM32F4xx_GPIO_Out_Speed STM32F4xx GPIO output speed
 //! \brief Values that can be passed to GPIOPadConfigSet as the ulSpeed parameter, 
 //! and returned from GPIOPadConfigGet.
 //! @{
@@ -2620,7 +2620,7 @@ extern unsigned long xGPIODirModeGet(unsigned long ulPort,
 //
 //! General purpose output push-pull.
 //
-#define GPIO_TYPE_OUT_STD       0x00000000  
+#define GPIO_TYPE_OUT_STD       0x00000001
 
 //
 //! General purpose output Open-drain.

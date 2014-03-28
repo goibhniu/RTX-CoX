@@ -837,17 +837,17 @@
 //
 //! I/O port C reset
 //
-#define RCC_APB2RSTR_IOPCRST    0x00000010
+#define RCC_AHB1RSTR_IOPCRST    0x00000002
 
 //
 //! I/O port B reset
 //
-#define RCC_APB2RSTR_IOPBRST    0x00000008
+#define RCC_AHB1RSTR_IOPBRST    0x00000001
 
 //
 //! I/O port A reset
 //
-#define RCC_APB2RSTR_IOPARST    0x00000004
+#define RCC_AHB1RSTR_IOPARST    0x00000000
 
 //
 //! Alternate function I/O reset
@@ -1737,7 +1737,7 @@
 //
 #define FLASH_ACR_LATENCY_2          0x00000002
 
-//SYSCTL_PERIPH_INDEX
+
 //*****************************************************************************
 //
 //! @}

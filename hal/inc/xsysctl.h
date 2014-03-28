@@ -1108,39 +1108,49 @@ extern unsigned long xSysCtlPeripheraIntNumGet(unsigned long ulPeripheralBase);
 #define SYSCTL_PERIPH_ADC1      0x10000200
 
 //
+//! I/O port I
+//
+#define SYSCTL_PERIPH_IOPI      0x00000100
+
+//
+//! I/O port H
+//
+#define SYSCTL_PERIPH_IOPH      0x00000080
+
+//
 //! I/O port G
 //
-#define SYSCTL_PERIPH_IOPG      0x10000100
+#define SYSCTL_PERIPH_IOPG      0x00000040
 
 //
 //! I/O port F
 //
-#define SYSCTL_PERIPH_IOPF      0x10000080
+#define SYSCTL_PERIPH_IOPF      0x00000020
 
 //
 //! I/O port E
 //
-#define SYSCTL_PERIPH_IOPE      0x10000040
+#define SYSCTL_PERIPH_IOPE      0x00000010
 
 //
 //! I/O port D
 //
-#define SYSCTL_PERIPH_IOPD      0x10000020
+#define SYSCTL_PERIPH_IOPD      0x00000008
 
 //
 //! I/O port C
 //
-#define SYSCTL_PERIPH_IOPC      0x10000010
+#define SYSCTL_PERIPH_IOPC      0x00000004
 
 //
 //! I/O port B
 //
-#define SYSCTL_PERIPH_IOPB      0x10000008
+#define SYSCTL_PERIPH_IOPB      0x00000002
 
 //
 //! I/O port A
 //
-#define SYSCTL_PERIPH_IOPA      0x10000004
+#define SYSCTL_PERIPH_IOPA      0x00000001
 
 //
 //! AFIO

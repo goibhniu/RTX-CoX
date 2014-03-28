@@ -357,7 +357,7 @@ SysCtlPeripheralValid(unsigned long ulPeripheral)
            (ulPeripheral == SYSCTL_PERIPH_TIM2) ||
            (ulPeripheral == SYSCTL_PERIPH_ADC1));
 }
-#endif
+#endif//SYSCTL_PERIPH_INDEX
 
 //*****************************************************************************
 //
